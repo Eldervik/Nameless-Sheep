@@ -1,0 +1,5 @@
+[Mon Dec 02 11:37:17.010220 2019] [ssl:warn] [pid 17768:tid 912] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Dec 02 11:37:17.077570 2019] [ssl:warn] [pid 17768:tid 912] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Dec 02 11:37:18.375190 2019] [ssl:warn] [pid 5564:tid 816] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Dec 02 11:37:18.433150 2019] [ssl:warn] [pid 5564:tid 816] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Dec 02 11:44:09.511750 2019] [php7:notice] [pid 5564:tid 1440] [client 127.0.0.1:58018] WordPress database error Unknown column 'ns_' in 'field list' for query SELECT ns_, referer: https://nameless-sheep.test/wp-admin/setup-config.php?step=1
