@@ -1,10 +1,13 @@
-<div id="sidebar" class="col-3 p-0">
-    <div class="accordion" id="accordionExample">
+<div id="sidebar" class="col-3 p-0 d-flex flex-column">
+    <form>
+        <input type="text" name="Search">
+    </form>
+    <div class="accordion flex-grow-1" id="accordionExample">
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
-                        Category #1
+                        <i class="fas fa-apple-alt"></i><span>Category #1</span>
                     </button>
                 </h2>
             </div>
@@ -20,7 +23,7 @@
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Category #2
+                        <i class="fas fa-apple-alt"></i><span>Category #2</span>
                     </button>
                 </h2>
             </div>
@@ -35,7 +38,7 @@
             <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Category #3
+                    <i class="fas fa-apple-alt"></i><span>Category #3</span>
                     </button>
                 </h2>
             </div>
@@ -47,5 +50,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="socials">
+        <i class="fab fa-facebook-square"></i>
     </div>
 </div>
