@@ -1,7 +1,55 @@
 #sidebar {
-    background-color: $color_secondary;
+    background-color: rgb(222, 222, 222);
     position: fixed;
     left: 0;
     top: 75px;
     bottom: 0;
+    
+    form {
+        input[type=text] {
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+        }
+    }
+    
+    .card {
+        border: none;
+        
+        button {
+            width: 100%;
+            text-align: left;
+            text-decoration: none;
+            color: black;
+            
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    .card-header:first-child {
+        border-radius: 0;
+    }
+    
+    a {
+        color: black;
+        background-color: rgb(222, 222, 222);
+        text-decoration: none;
+        transition: all ease .3s;
+        opacity: .9;
+
+        &:hover {
+            padding-left: 30px;
+            opacity: 1;
+        }
+    }
+
+    .socials {
+        background-color: $color-secondary;
+
+        i {
+            font-size: 40px;
+        }
+    }
 }
