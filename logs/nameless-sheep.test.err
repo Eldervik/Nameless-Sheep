@@ -1060,3 +1060,7 @@
 [Wed Dec 04 15:11:04.515315 2019] [php7:notice] [pid 11980:tid 1448] [client 127.0.0.1:55087] PHP  13. WP_Hook->apply_filters() C:\\Program Files (x86)\\Ampps\\www\\nameless-sheep.test\\public\\wp-includes\\class-wp-hook.php:312, referer: https://nameless-sheep.test/wp-admin/themes.php
 [Wed Dec 04 15:11:04.515315 2019] [php7:notice] [pid 11980:tid 1448] [client 127.0.0.1:55087] PHP  14. nameless_sheep_scripts() C:\\Program Files (x86)\\Ampps\\www\\nameless-sheep.test\\public\\wp-includes\\class-wp-hook.php:288, referer: https://nameless-sheep.test/wp-admin/themes.php
 [Wed Dec 04 15:11:04.515315 2019] [php7:notice] [pid 11980:tid 1448] [client 127.0.0.1:55087] PHP  15. filemtime() C:\\Program Files (x86)\\Ampps\\www\\nameless-sheep.test\\public\\wp-content\\themes\\nameless-sheep-theme\\inc\\enqueue.php:25, referer: https://nameless-sheep.test/wp-admin/themes.php
+[Sat Dec 07 21:52:34.863241 2019] [ssl:warn] [pid 13128:tid 888] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Dec 07 21:52:35.211241 2019] [ssl:warn] [pid 13128:tid 888] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Dec 07 21:52:37.223241 2019] [ssl:warn] [pid 5592:tid 848] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Dec 07 21:52:37.331242 2019] [ssl:warn] [pid 5592:tid 848] AH01906: nameless-sheep.test:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)

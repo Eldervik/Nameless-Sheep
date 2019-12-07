@@ -1,4 +1,5 @@
 <div id="sidebar" class="col-3 p-0 d-flex flex-column">
+    <div class="arrow"></div>
     <form>
         <input type="text" name="Search" placeholder="Search Product...">
     </form>
@@ -52,8 +53,8 @@
         </div>
     </div>
     <div class="socials d-flex">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-facebook-square"></i>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
     </div>
 </div>

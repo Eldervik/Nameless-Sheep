@@ -4,6 +4,15 @@
     left: 0;
     top: 75px;
     bottom: 0;
+
+    .arrow {
+        height: 60px;
+        width: 15px;
+        background-color: $color-secondary;
+        position: absolute;
+        right: -15px;
+        top: 35%;
+    }
     
     form {
         input[type=text] {
@@ -12,44 +21,52 @@
             padding: 12px 20px 12px 40px;
         }
     }
-    
-    .card {
-        border: none;
-        
-        button {
-            width: 100%;
-            text-align: left;
-            text-decoration: none;
-            color: black;
+
+    .accordion {
+        overflow-y: scroll;
+
+        .card {
+            border: none;
             
-            span {
-                margin-left: 10px;
+            button {
+                width: 100%;
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                
+                span {
+                    margin-left: 10px;
+                }
+            }
+    
+            a {
+                color: black;
+                background-color: rgb(222, 222, 222);
+                text-decoration: none;
+                transition: all ease .3s;
+                opacity: .9;
+        
+                &:hover {
+                    padding-left: 30px;
+                    opacity: 1;
+                }
             }
         }
     }
-    
+
     .card-header:first-child {
         border-radius: 0;
     }
     
-    a {
-        color: black;
-        background-color: rgb(222, 222, 222);
-        text-decoration: none;
-        transition: all ease .3s;
-        opacity: .9;
-
-        &:hover {
-            padding-left: 30px;
-            opacity: 1;
-        }
-    }
 
     .socials {
         background-color: $color-secondary;
+        padding: 5px 20px;
 
         i {
-            font-size: 40px;
+            font-size: 30px;
+            margin-right: 5px;
+            color: black;
         }
     }
 }
