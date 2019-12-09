@@ -1,5 +1,7 @@
 <div id="sidebar" class="col-3 p-0 d-flex flex-column">
-    <div class="arrow"></div>
+    <div id="arrow" class="arrow d-flex justify-content-center align-items-center">
+        <i class="fas fa-angle-left"></i>
+    </div>
     <form>
         <input type="text" name="Search" placeholder="Search Product...">
     </form>
@@ -58,3 +60,5 @@
         <a href="#"><i class="fab fa-facebook-square"></i></a>
     </div>
 </div>
+
+<?php wp_enqueue_script( 'sidebar', get_template_directory_uri() . '/js/sidebar.js', array(), 1, true); ?>
