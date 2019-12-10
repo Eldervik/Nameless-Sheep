@@ -62,5 +62,4 @@
     </div>
 </div>
 
-<?php wp_enqueue_script( 'sidebar', get_template_directory_uri() . '/js/sidebar.js', array(), 1, true); ?>
-<?php wp_enqueue_script( 'sidebar-new', get_template_directory_uri() . '/js/sidebar-new.js', array(), 1, true); ?>
+<?php wp_enqueue_script( 'sidebar-new', get_template_directory_uri() . '/js/sidebar.js', array(), 1, true); ?>

@@ -1,46 +1,51 @@
-let open = true;
+let windowWidth = window.outerWidth;
+let columnWidth = 100 / 12;
+let column = 3;
+let menuOpen = true;
+let hideWidth;
 
-// small 540px
-// medium 720px
-// large 960px
+function hideOnResize(windowWidth) {
+    $('.content').removeClass( 'col-12' );
+    $('.content').addClass( 'col-9' );
+    $('#sidebar').css( 'left', '0' );
+    $('#arrow i').css( 'transform', 'rotate(0deg)' );
+    menuOpen = true;
+    
+    // columnWidth * column;
+    if (windowWidth <= 540) {
+        column = 11;
+        menuOpen = false;
+    } else if (windowWidth <= 720) {
+        column = 6;
+        menuOpen = false;
+    } else if (windowWidth <= 940) {
+        column = 4;
+    }
+    columnChange(column);
+};
 
-// col-lg-3 col-md-4 col-sm-6 col-11
+function columnChange(column) {
+    hideWidth = columnWidth * column + "%";
+}
 
-let col = (100 / 12) * 3;
-let width = $(window).outerWidth();
+hideOnResize(windowWidth);
+$(window).resize(function() {
+    windowWidth = $(window).outerWidth();
+    hideOnResize(windowWidth);
+});
+
 $( '#arrow' ).click(function() {
-    if (open == true) {
-        $('#sidebar').css( 'left', '-' + col + '%' );
+    if (menuOpen) {
+        $('#sidebar').css( 'left', '-' + hideWidth );
         $('.content').removeClass( 'col-9' );
         $('.content').addClass( 'col-12' );
         $('#arrow i').css( 'transform', 'rotate(180deg)' );
-        open = false;
+        menuOpen = false;
     } else {
         $('.content').removeClass( 'col-12' );
         $('.content').addClass( 'col-9' );
         $('#sidebar').css( 'left', '0' );
         $('#arrow i').css( 'transform', 'rotate(0deg)' );
-        open = true;
+        menuOpen = true;
     }
-});
-
-function hideOnResize() {
-    if (width <= 960) {
-        $('#sidebar').css( 'left', '-' + col + '%' );
-        $('.content').removeClass( 'col-9' );
-        $('.content').addClass( 'col-12' );
-        $('#arrow i').css( 'transform', 'rotate(180deg)' );
-        open = false;
-    } else {
-        $('#sidebar').css( 'left', '0' );
-        $('.content').addClass( 'col-9' );
-        $('#sidebar').css( 'left', '0' );
-        $('#arrow i').css( 'transform', 'rotate(0deg)' );
-        open = true;
-    }
-};
-
-$(window).resize(function() {
-    width = $(window).outerWidth();
-    hideOnResize();
 });
