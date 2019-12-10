@@ -4,8 +4,8 @@
 function nsfb_add_settings_page_to_menu() {
 	add_submenu_page(
 		'options-general.php', // parent page
-		_e('Nameless Sheep Facebook Settings'), // page title
-		_e('Facebook'), // menu title
+		__('Nameless Sheep Facebook Settings'), // page title
+		__('Facebook'), // menu title
 		'manage_options', // minimum capability
 		'nsfacebook', // slug for our page
 		'nsfb_settings_page' // callback to render page
@@ -42,7 +42,7 @@ function nsfb_settings_init() {
 	 */
 	add_settings_section(
 		'nsfb_general_options', // id
-		_e('General Options'), // section title
+		__('General Options'), // section title
 		'nsfb_general_options_section', // callback for rendering content below title and above settings fields
 		'nsfacebook' // page to add this settings section to
 	);
@@ -54,7 +54,7 @@ function nsfb_settings_init() {
 	//Set the title.
 	add_settings_field(
 		'nsfb_title', // id
-		_e('Title:'), // label
+		__('Title:'), // label
 		'nsfb_title_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -64,7 +64,7 @@ function nsfb_settings_init() {
     // Change number of posts to display.
 	add_settings_field(
 		'nsfb_number_fbposts', // id
-		_e('Number of posts shown:'), // label
+		__('Number of posts shown:'), // label
 		'nsfb_number_fbposts_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -74,7 +74,7 @@ function nsfb_settings_init() {
     // Add field for the token.
 	add_settings_field(
 		'nsfb_token', // id
-		_e('Facebook api access token:'), // label
+		__('Facebook api access token:'), // label
 		'nsfb_token_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -84,7 +84,7 @@ function nsfb_settings_init() {
 	 // Checkbox if you want to show author.
 	add_settings_field(
 		'nsfb_show_author', // id
-		_e('Show author:'), // label
+		__('Show author:'), // label
 		'nsfb_show_author_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -94,7 +94,7 @@ function nsfb_settings_init() {
      // Checkbox if you want to show date.
 	add_settings_field(
 		'nsfb_show_date', // id
-		_e('Show date:'), // label
+		__('Show date:'), // label
 		'nsfb_show_date_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -104,7 +104,7 @@ function nsfb_settings_init() {
      // Checkbox if you want to show pictures.
 	add_settings_field(
 		'nsfb_show_picture', // id
-		_e('Show picture:'), // label
+		__('Show picture:'), // label
 		'nsfb_show_picture_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -114,7 +114,7 @@ function nsfb_settings_init() {
      // Checkbox if you want to show messages.
 	add_settings_field(
 		'nsfb_show_message', // id
-		_e('Show message:'), // label
+		__('Show message:'), // label
 		'nsfb_show_message_cb', // callback for rendering form field
 		'nsfacebook', // page to add settings field to
 		'nsfb_general_options' // section to add settings field to
@@ -135,7 +135,7 @@ function nsfb_title_cb() {
 			type="text"
 			name="nsfb_title"
 			id="nsfb_title"
-			value="<?php echo get_option('nsfb_title', _e('Facebook')); ?>"
+			value="<?php echo get_option('nsfb_title', __('Facebook')); ?>"
 		>
 	<?php
 }
@@ -154,7 +154,7 @@ function nsfb_token_cb() {
 function nsfb_number_fbposts_cb() {
 	?>
 		<input
-			type="text"
+			type="number"
 			name="nsfb_number_fbposts"
 			id="nsfb_number_fbposts"
 			value="<?php echo get_option('nsfb_number_fbposts', '5'); ?>"
