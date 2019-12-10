@@ -106,6 +106,7 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/themes/nameless-sheep-theme/
+!wp-content/plugins/ns-facebook/
 !wp-content/plugins/woocommerce/
 !wp-content/plugins/woocommerce-admin/
 !wp-content/plugins/woocommerce-gateway-stripe/
