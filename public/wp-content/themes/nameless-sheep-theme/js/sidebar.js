@@ -4,9 +4,13 @@ let width = $(window).width();
 $( '#arrow' ).click(function() {
     if (open == true) {
         $('#sidebar').css( 'left', '-' + col + '%' );
+        $('.content').removeClass( 'col-9' );
+        $('.content').addClass( 'col-12' );
         $('#arrow i').css( 'transform', 'rotate(180deg)' );
         open = false;
     } else {
+        $('.content').removeClass( 'col-12' );
+        $('.content').addClass( 'col-9' );
         $('#sidebar').css( 'left', '0' );
         $('#arrow i').css( 'transform', 'rotate(0deg)' );
         open = true;

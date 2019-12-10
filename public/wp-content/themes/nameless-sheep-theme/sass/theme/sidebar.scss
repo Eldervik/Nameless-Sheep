@@ -5,7 +5,6 @@
     top: 75px;
     bottom: 0;
     z-index: 1;
-    transition: left ease .3s;
 
 
     .arrow {
@@ -55,7 +54,6 @@
                 color: black;
                 background-color: rgb(222, 222, 222);
                 text-decoration: none;
-                transition: all ease .3s;
                 opacity: .9;
         
                 &:hover {
