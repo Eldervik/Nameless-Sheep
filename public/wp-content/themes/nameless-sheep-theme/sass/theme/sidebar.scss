@@ -1,7 +1,80 @@
 #sidebar {
-    background-color: $color_secondary;
+    background-color: $color-primary;
     position: fixed;
-    left: 0;
+    left: 0px;
     top: 75px;
     bottom: 0;
+    z-index: 1;
+
+
+    .arrow {
+        height: 60px;
+        width: 15px;
+        background-color: $color-secondary;
+        position: absolute;
+        right: -15px;
+        top: 35%;
+        transition: all ease .2s;
+        opacity: .9;
+        font-size: 1.5rem;
+        
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            color: $color-primary;
+        }
+    }
+    
+    form {
+        input[type=text] {
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+        }
+    }
+
+    .accordion {
+        overflow-y: scroll;
+
+        .card {
+            border: none;
+            
+            button {
+                width: 100%;
+                text-align: left;
+                text-decoration: none;
+                color: black;
+                
+                span {
+                    margin-left: 10px;
+                }
+            }
+    
+            a {
+                color: black;
+                background-color: rgb(222, 222, 222);
+                text-decoration: none;
+                opacity: .9;
+        
+                &:hover {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
+    .card-header:first-child {
+        border-radius: 0;
+    }
+
+    .socials {
+        background-color: $color-secondary;
+        padding: 5px 20px;
+
+        i {
+            font-size: 30px;
+            margin-right: 5px;
+            color: black;
+        }
+    }
 }
