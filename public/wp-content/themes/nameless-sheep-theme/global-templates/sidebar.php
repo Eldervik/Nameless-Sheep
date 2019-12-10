@@ -16,6 +16,7 @@
             </div>
             <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="d-flex flex-column">
+                    <a href="#" class="card-header">All Products</a>
                     <a href="#" class="card-header">Sub Category #1</a>
                     <a href="#" class="card-header">Sub Category #2</a>
                     <a href="#" class="card-header">Sub Category #3</a>
