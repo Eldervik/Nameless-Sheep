@@ -1,4 +1,3 @@
-   
 <?php
 /**
  * Adds Nameless Sheep Facebook widget.
@@ -49,7 +48,7 @@ class nsfacebook extends WP_Widget {
 	public function form($instance) { 
         ?>
 		<p>
-			Settings page: <a href="https://nameless-sheep.test/wp-admin/options-general.php?page=nsfacebook">Settings</a>
+			<?php _e('Settings page:')?> <a href="https://nameless-sheep.test/wp-admin/options-general.php?page=nsfacebook"><?php _e('Settings')?></a>
         </p>
 	<?php
 	}
