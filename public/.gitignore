@@ -106,3 +106,10 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/themes/nameless-sheep-theme/
+!wp-content/plugins/woocommerce/
+!wp-content/plugins/woocommerce-admin/
+!wp-content/plugins/woocommerce-gateway-stripe/
+!wp-content/plugins/woocommerce-services/
+!wp-content/plugins/tidio-live-chat/
+!wp-content/plugins/klarna-checkout-for-woocommerce/
+!wp-content/plugins/jetpack/
