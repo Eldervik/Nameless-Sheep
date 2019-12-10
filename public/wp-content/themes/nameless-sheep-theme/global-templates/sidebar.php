@@ -1,4 +1,4 @@
-<div id="sidebar" class="col-3 p-0 d-flex flex-column">
+<div id="sidebar" class="col-lg-3 col-md-4 col-sm-6 col-11 p-0 d-flex flex-column">
     <div id="arrow" class="arrow d-flex justify-content-center align-items-center">
         <i class="fas fa-angle-left"></i>
     </div>
@@ -63,3 +63,4 @@
 </div>
 
 <?php wp_enqueue_script( 'sidebar', get_template_directory_uri() . '/js/sidebar.js', array(), 1, true); ?>
+<?php wp_enqueue_script( 'sidebar-new', get_template_directory_uri() . '/js/sidebar-new.js', array(), 1, true); ?>
