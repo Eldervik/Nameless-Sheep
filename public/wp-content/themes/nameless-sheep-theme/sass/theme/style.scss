@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: all ease .3s;
+}
+
+body {
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+        margin-top: 75px;
+        overflow: hidden;
+        flex: 1;
+        position: relative;
+    }
+}
