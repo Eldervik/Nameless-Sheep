@@ -19,3 +19,15 @@ foreach ( $nameless_sheep_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+add_theme_support('post-thumbnails');
+
+add_image_size('post_image', 1000, 1000, true);
+
+add_filter( 'woocommerce_currency_symbol', 'my_custom_currency_symbol' );
+function my_custom_currency_symbol( $symbol ){
+	
+	$symbol = ':-';
+	
+    return $symbol;
+}

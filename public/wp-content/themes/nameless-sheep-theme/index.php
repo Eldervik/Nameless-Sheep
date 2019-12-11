@@ -3,7 +3,8 @@
         <?php get_template_part( 'global-templates/sidebar' ); ?>
         <div class="content col-9">
             index
+            <?php get_template_part( 'global-templates/chat' ); ?>
         </div>
-        <?php get_template_part( 'global-templates/chat' ); ?>
     </main>
 <?php include_once('footer.php'); ?>
+
