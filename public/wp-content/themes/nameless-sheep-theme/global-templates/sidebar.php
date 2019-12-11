@@ -2,9 +2,7 @@
     <div id="arrow" class="arrow d-flex justify-content-center align-items-center">
         <i class="fas fa-angle-left"></i>
     </div>
-    <form>
-        <input type="text" name="Search" placeholder="Search Product...">
-    </form>
+    <?php get_search_form();?>
     <div class="accordion flex-grow-1" id="accordionExample">
         <div class="card">
             <div class="card-header" id="headingTwo">
