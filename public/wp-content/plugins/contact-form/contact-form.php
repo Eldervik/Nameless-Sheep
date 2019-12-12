@@ -37,12 +37,15 @@ class contact_Form {
             $body = $comments;
             $fel="Please Try Again";
             $headers = [('Content-Type: text/html; charset=UTF-8')];
+            //if it is true redirect to front page
          if (wp_mail( $to, $subject, $body, $headers )){
-                        wp_redirect( '/', 301 ); exit; 
+                wp_redirect( '/', 301 ); exit; 
             }
+           //else fsil massage
             else{$felvar_dump('sad');
             }
-}}
+        }
+    }
     /**
      * Display form
      */
