@@ -18,7 +18,7 @@ $product_cat = get_terms( $args );
         <div class="card">
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                    <button class="btn btn-link collapsed p-0" type="button" data-toggle="collapse" data-target="#cat-<?php echo $parent_product_cat->term_id; ?>" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cat-<?php echo $parent_product_cat->term_id; ?>" aria-expanded="false" aria-controls="collapseTwo">
                     <?php the_field('cat_icon', $parent_product_cat); ?><span><?php echo $parent_product_cat->name; ?></span>
                     </button>
                 </h2>
@@ -34,17 +34,17 @@ $product_cat = get_terms( $args );
             <div id="cat-<?php echo $parent_product_cat->term_id; ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
 
                 <div class="d-flex flex-column">
-                    <a href="<?php echo get_term_link($parent_product_cat->term_id); ?>" class="card-header"><?php esc_html_e('All products', 'nameless-sheep') ?></a>
+                    <a href="<?php echo get_term_link($parent_product_cat->term_id); ?>" class="card-body"><?php esc_html_e('All products', 'nameless-sheep') ?></a>
                     <?php
                     foreach ($child_product_cats as $child_product_cat) { ?>
-                        <a href="<?php echo get_term_link($child_product_cat->term_id); ?>" class="card-header"><?php echo $child_product_cat->name; ?></a>
+                        <a href="<?php echo get_term_link($child_product_cat->term_id); ?>" class="card-body"><?php echo $child_product_cat->name; ?></a>
                     <?php } ?>
                 </div>
             </div>
         </div>
     <?php } ?>
     </div>
-    <div class="socials d-flex">
+    <div class="socials d-flex align-items-center">
         <a href="#"><i class="fab fa-facebook-square"></i></a>
         <a href="#"><i class="fab fa-facebook-square"></i></a>
         <a href="#"><i class="fab fa-facebook-square"></i></a>

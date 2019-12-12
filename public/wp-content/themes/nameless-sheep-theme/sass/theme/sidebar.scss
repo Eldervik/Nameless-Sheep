@@ -5,8 +5,9 @@
     top: 75px;
     bottom: 0;
     z-index: 1;
-
-
+    box-shadow: 0 0 10px black;
+    
+    
     .arrow {
         height: 60px;
         width: 15px;
@@ -21,11 +22,7 @@
         
         &:hover {
             cursor: pointer;
-            opacity: 1;
-
-            i {
-                opacity: .8;
-            }
+            opacity: .9;
         }
     }
     
@@ -93,8 +90,29 @@
         }
     }
 
-    .card-header:first-child {
-        border-radius: 0;
+    .card-header {
+        padding: 0;
+
+        &:hover {
+            button {
+                border-left: solid 5px $color-secondary;
+                padding-left: 16px;
+            }
+        }
+        
+        &:first-child {
+            border-radius: 0;
+        }
+
+        button {
+            border-radius: 0;
+            padding: 12px 20px;
+        }
+
+        button[aria-expanded="true"]{
+            border-left: solid 5px $color-secondary;
+            padding-left: 16px;
+          }
     }
 
     .socials {
@@ -103,7 +121,8 @@
 
         i {
             font-size: 30px;
-            margin-right: 5px;
+            padding-top: 4px;
+            margin-right: 10px;
             color: $color-primary;
         }
     }
