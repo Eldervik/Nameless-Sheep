@@ -31,11 +31,18 @@ class contact_Form {
             
             $title = filter_input( INPUT_POST, 'title', FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY );
             $comments    = filter_input( INPUT_POST, 'comments', FILTER_SANITIZE_STRING );
-
-            // Send an email and redirect user to "Thank you" page.
-        }
-    }
-
+            var_dump($full_name);
+            $to = 'nariman.alkurdi@hotmail.com';
+            $subject = $title ;
+            $body = $comments;
+            $fel="Please Try Again";
+            $headers = [('Content-Type: text/html; charset=UTF-8')];
+         if (wp_mail( $to, $subject, $body, $headers )){
+                        wp_redirect( '/', 301 ); exit; 
+            }
+            else{$felvar_dump('sad');
+            }
+}}
     /**
      * Display form
      */
@@ -190,6 +197,9 @@ class contact_Form {
          * Add action to send email
          */
         add_action( 'wp', array( $this, 'controller' ) );
+        
+
+
 
         /**
          * Add shortcode to display form

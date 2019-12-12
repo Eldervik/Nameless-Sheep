@@ -115,3 +115,6 @@ Thumbs.db
 !wp-content/plugins/klarna-checkout-for-woocommerce/
 !wp-content/plugins/jetpack/
 !wp-content/plugins/contact-form
+!wp-content/plugins/mailgun
+
+
