@@ -41,8 +41,10 @@ class contact_Form {
          if (wp_mail( $to, $subject, $body, $headers )){
                 wp_redirect( '/', 301 ); exit; 
             }
-           //else fsil massage
-            else{$felvar_dump('sad');
+           //else fail massage
+            else{
+                $fel;
+                var_dump('sad');
             }
         }
     }
