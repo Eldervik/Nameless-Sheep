@@ -108,9 +108,9 @@ __( "Add item", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Which items would you like to add to {{pckg/}}?", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Packaging", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "No packages selected", "woocommerce-services" ), // dist/woocommerce-services.js:107
-__( "1 item in 1 package: %(weight)f %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
-__( "%(itemsCount)d items in 1 package: %(weight)f %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
-__( "%(itemsCount)d items in %(packageCount)d packages: %(weight)f %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
+__( "1 item in 1 package: %(weight)s %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
+__( "%(itemsCount)d items in 1 package: %(weight)s %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
+__( "%(itemsCount)d items in %(packageCount)d packages: %(weight)s %(unit)s total", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Use these packages", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "HS Tariff number", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "more info", "woocommerce-services" ), // dist/woocommerce-services.js:107
@@ -213,6 +213,7 @@ __( "No activity yet", "woocommerce-services" ), // dist/woocommerce-services.js
 __( "Which package would you like to track?", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Create shipping label", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Track Packages", "woocommerce-services" ), // dist/woocommerce-services.js:107
+__( "Create new label", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Track Packages", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Create shipping label", "woocommerce-services" ), // dist/woocommerce-services.js:107
 __( "Connection error: unable to create label at this time", "woocommerce-services" ), // dist/woocommerce-services.js:107
