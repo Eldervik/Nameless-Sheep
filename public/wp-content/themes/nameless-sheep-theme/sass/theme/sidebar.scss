@@ -10,18 +10,22 @@
     .arrow {
         height: 60px;
         width: 15px;
+        color: $color-primary;
         background-color: $color-secondary;
         position: absolute;
         right: -15px;
         top: 35%;
         transition: all ease .2s;
-        opacity: .9;
+        opacity: 1;
         font-size: 1.5rem;
         
         &:hover {
             cursor: pointer;
             opacity: 1;
-            color: $color-primary;
+
+            i {
+                opacity: .8;
+            }
         }
     }
     
@@ -36,6 +40,7 @@
                 padding-left: 2.375rem;
                 border-radius: 0;
                 border: none;
+                background-color: $color-white;
 
                 &:focus {
                     box-shadow: none;
@@ -62,6 +67,7 @@
         .card {
             border: none;
             border-radius: 0;
+            background-color: $color-white;
 
             button {
                 width: 100%;
@@ -75,8 +81,8 @@
             }
     
             a {
-                color: black;
-                background-color: rgb(222, 222, 222);
+                color: $color-secondary;
+                background-color: $color-primary;
                 text-decoration: none;
                 opacity: .9;
         
@@ -98,7 +104,7 @@
         i {
             font-size: 30px;
             margin-right: 5px;
-            color: black;
+            color: $color-primary;
         }
     }
 }
