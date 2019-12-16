@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s woocommerce-services\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-14T20:21:21.366Z\n"
+"POT-Creation-Date: 2019-12-10T21:30:34.961Z\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -419,16 +419,16 @@ msgid "No packages selected"
 msgstr ""
 
 #: dist/woocommerce-services.js:107
-msgid "1 item in 1 package: %(weight)f %(unit)s total"
+msgid "1 item in 1 package: %(weight)s %(unit)s total"
 msgstr ""
 
 #: dist/woocommerce-services.js:107
-msgid "%(itemsCount)d items in 1 package: %(weight)f %(unit)s total"
+msgid "%(itemsCount)d items in 1 package: %(weight)s %(unit)s total"
 msgstr ""
 
 #: dist/woocommerce-services.js:107
 msgid ""
-"%(itemsCount)d items in %(packageCount)d packages: %(weight)f %(unit)s total"
+"%(itemsCount)d items in %(packageCount)d packages: %(weight)s %(unit)s total"
 msgstr ""
 
 #: dist/woocommerce-services.js:107
@@ -803,6 +803,10 @@ msgstr ""
 
 #: dist/woocommerce-services.js:107
 msgid "Track Packages"
+msgstr ""
+
+#: dist/woocommerce-services.js:107
+msgid "Create new label"
 msgstr ""
 
 #: dist/woocommerce-services.js:107

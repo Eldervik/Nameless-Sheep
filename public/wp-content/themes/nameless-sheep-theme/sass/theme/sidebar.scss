@@ -5,40 +5,67 @@
     top: 75px;
     bottom: 0;
     z-index: 1;
-
-
+    box-shadow: 0 0 10px black;
+    
+    
     .arrow {
         height: 60px;
         width: 15px;
+        color: $color-primary;
         background-color: $color-secondary;
         position: absolute;
         right: -15px;
         top: 35%;
         transition: all ease .2s;
-        opacity: .9;
+        opacity: 1;
         font-size: 1.5rem;
         
         &:hover {
             cursor: pointer;
-            opacity: 1;
-            color: $color-primary;
+            opacity: .9;
         }
     }
     
     form {
-        input[type=text] {
-            width: 100%;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .has-search {
+
+            .form-control {
+                padding-left: 2.375rem;
+                border-radius: 0;
+                border: none;
+                background-color: $color-white;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .form-control-feedback {
+                position: absolute;
+                z-index: 2;
+                display: block;
+                width: 2.375rem;
+                height: 2.375rem;
+                line-height: 2.375rem;
+                text-align: center;
+                pointer-events: none;
+                color: #aaa;
+            }
         }
     }
-
+    
     .accordion {
         overflow-y: scroll;
 
         .card {
             border: none;
-            
+            border-radius: 0;
+            background-color: $color-white;
+
             button {
                 width: 100%;
                 text-align: left;
@@ -51,8 +78,8 @@
             }
     
             a {
-                color: black;
-                background-color: rgb(222, 222, 222);
+                color: $color-secondary;
+                background-color: $color-primary;
                 text-decoration: none;
                 opacity: .9;
         
@@ -63,8 +90,29 @@
         }
     }
 
-    .card-header:first-child {
-        border-radius: 0;
+    .card-header {
+        padding: 0;
+
+        &:hover {
+            button {
+                border-left: solid 5px $color-secondary;
+                padding-left: 16px;
+            }
+        }
+        
+        &:first-child {
+            border-radius: 0;
+        }
+
+        button {
+            border-radius: 0;
+            padding: 12px 20px;
+        }
+
+        button[aria-expanded="true"]{
+            border-left: solid 5px $color-secondary;
+            padding-left: 16px;
+          }
     }
 
     .socials {
@@ -73,8 +121,9 @@
 
         i {
             font-size: 30px;
-            margin-right: 5px;
-            color: black;
+            padding-top: 4px;
+            margin-right: 10px;
+            color: $color-primary;
         }
     }
 }
