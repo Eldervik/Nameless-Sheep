@@ -40,3 +40,60 @@ function my_custom_currency_symbol( $symbol ){
 	
     return $symbol;
 }
+
+register_sidebar(
+	array(
+		'name' => 'Main bar',
+		'id' => 'main-bar',
+		'class' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
+
+	)
+);
+
+/**
+ * Add quantity field on the shop page.
+ */
+function ace_shop_page_add_quantity_field() {
+
+	/** @var WC_Product $product */
+	$product = wc_get_product( get_the_ID() );
+
+	if ( ! $product->is_sold_individually() && 'variable' != $product->get_type() && $product->is_purchasable() ) {
+		woocommerce_quantity_input( array( 'min_value' => 1, 'max_value' => $product->backorders_allowed() ? '' : $product->get_stock_quantity() ) );
+	}
+
+}
+add_action( 'woocommerce_after_shop_loop_item', 'ace_shop_page_add_quantity_field', 12 );
+
+
+/**
+ * Add required JavaScript.
+ */
+function ace_shop_page_quantity_add_to_cart_handler() {
+
+	wc_enqueue_js( '
+		$(".woocommerce .products").on("click", ".quantity input", function() {
+			return false;
+		});
+		$(".woocommerce .products").on("change input", ".quantity .qty", function() {
+			var add_to_cart_button = $(this).parents( ".product" ).find(".add_to_cart_button");
+
+			// For AJAX add-to-cart actions
+			add_to_cart_button.data("quantity", $(this).val());
+
+			// For non-AJAX add-to-cart actions
+			add_to_cart_button.attr("href", "?add-to-cart=" + add_to_cart_button.attr("data-product_id") + "&quantity=" + $(this).val());
+		});
+
+		// Trigger on Enter press
+		$(".woocommerce .products").on("keypress", ".quantity .qty", function(e) {
+			if ((e.which||e.keyCode) === 13) {
+				$( this ).parents(".product").find(".add_to_cart_button").trigger("click");
+			}
+		});
+	' );
+
+}
+add_action( 'init', 'ace_shop_page_quantity_add_to_cart_handler' );
