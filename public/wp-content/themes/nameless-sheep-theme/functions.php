@@ -20,6 +20,15 @@ foreach ( $nameless_sheep_includes as $file ) {
 	require_once $filepath;
 }
 
+function register_menus() {
+    register_nav_menus(
+        [
+          'header-menu' => __( 'Header Menu' ),
+        ]
+    );
+}
+add_action( 'init', 'register_menus' );
+
 add_theme_support('post-thumbnails');
 
 add_image_size('post_image', 1000, 1000, true);

@@ -114,4 +114,14 @@ Thumbs.db
 !wp-content/plugins/tidio-live-chat/
 !wp-content/plugins/klarna-checkout-for-woocommerce/
 !wp-content/plugins/jetpack/
+!wp-content/plugins/contact-form
+!wp-content/plugins/mailgun
+!wp-content/plugins/woocommerce-multilingual
+!wp-content/plugins/wpml-translation-management
+!wp-content/plugins/sitepress-multilingual-cms
+!wp-content/plugins/wpml-string-translation
+
+
+
+
 !wp-content/plugins/advanced-custom-fields-pro/
