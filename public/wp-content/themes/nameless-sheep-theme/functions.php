@@ -97,3 +97,35 @@ function ace_shop_page_quantity_add_to_cart_handler() {
 
 }
 add_action( 'init', 'ace_shop_page_quantity_add_to_cart_handler' );
+$product = new WP_Query([
+	'post_type' => 'product',
+	'posts_per_page' => -1,
+]);
+function category_after_third_post( $product ) {
+        global $wp_query;
+
+        if ( $wp_query->post != $product )
+            return;
+
+        if ( 3 != $wp_query->current_post || 6 != $wp_query->current_post )
+            return;
+
+        $args = array(
+        'category_name' => 'reklam',
+        'posts_per_page' => 3
+        );
+
+        $catquery = new WP_Query($args);
+
+        if ( $catquery->have_posts() ) :
+
+            while ( $catquery->have_posts() ) : $catquery->the_post();
+
+                get_template_part( 'content', get_post_format() );
+
+            endwhile;
+
+        endif; 
+    }
+
+add_action( 'the_post', 'category_after_third_post' );
