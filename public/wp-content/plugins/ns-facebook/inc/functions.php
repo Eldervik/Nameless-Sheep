@@ -20,7 +20,7 @@ function nsfb_get_facebook() {
                 $replacedmessagestagethree = str_replace("\\","", $messagestagethree);
                 $newreplacedmessagestagethree = explode(' ', $replacedmessagestagethree[0]);
                 foreach($newreplacedmessagestagethree as $stringmessage){
-                    if(substr($stringmessage, 0, 8) === "https://"){
+                    if(substr($stringmessage, 0, 8) === "https://" || substr($stringmessage, 0, 7) === "http://"){
                         $stringmessage = "<a href='{$stringmessage}'>" . $stringmessage . "</a> ";
                         echo $stringmessage;
                     }else{
