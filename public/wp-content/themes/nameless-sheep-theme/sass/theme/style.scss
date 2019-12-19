@@ -25,3 +25,7 @@ body {
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
     max-width: unset;
 }
+
+.woocommerce-cart table.cart td.actions input#coupon_code {
+    width: 150px;
+}
