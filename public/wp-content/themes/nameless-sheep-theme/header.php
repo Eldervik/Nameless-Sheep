@@ -15,7 +15,6 @@
 
 <body <?php body_class(); ?>>
     <header>
-      header
         <nav>
             <?php
               wp_nav_menu( array( 
