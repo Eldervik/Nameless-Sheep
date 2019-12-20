@@ -31,7 +31,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
+    do_action( 'woocommerce_before_shop_loop_item' );
+
+    // Get the price
     if ( $price_html = $product->get_price_html() ) : ?>
         <div class="price-container">
             <div class="price">

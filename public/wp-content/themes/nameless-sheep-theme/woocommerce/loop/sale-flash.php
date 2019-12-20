@@ -22,11 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product;
 
 ?>
-<?php if ( $product->is_on_sale() ) : ?>
+
+<?php 
+// If on sale show sale ribbon
+if ( $product->is_on_sale() ) : ?>
     <div class="aws_result_sale">
         <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="aws_onsale">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
     </div>
-
 <?php endif;
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

@@ -53,9 +53,13 @@
             .button {
                 margin-top: 0;
                 width: 100%;
-
-                &::after {
-                    margin-left: auto;
+                padding: 5px 10px;
+                border-radius: 0;
+                font-weight: normal;
+                opacity: .9;
+                
+                &:hover {
+                    opacity: 1;
                 }
             }
 
@@ -118,12 +122,11 @@
                 &::after {
                     transform: rotate(-45deg);
                 }
-
                 .number {
                     position: absolute;
                     z-index: 1;
                     color: white;
-                    top: 150%;
+                    top: 175%;
                     font-weight: bold;
                     
                     ins {
