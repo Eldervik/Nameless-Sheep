@@ -121,8 +121,5 @@ Thumbs.db
 !wp-content/plugins/sitepress-multilingual-cms
 !wp-content/plugins/wpml-string-translation
 !wp-content/plugins/advanced-woo-search
-
-
-
-
 !wp-content/plugins/advanced-custom-fields-pro/
+!wp-content/plugins/custom-post-type-ui/
