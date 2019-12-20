@@ -1,0 +1,146 @@
+.woocommerce {
+    ul.products {
+        li.product {
+            position: relative;
+
+            a.woocommerce-loop-product {
+                &__link {
+                    .aws_result_sale {
+                        display: block;
+                        height: 42px;
+                        overflow: hidden;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 47px;
+                        
+                        .aws_onsale {
+                            background: #77a464 none repeat scroll 0 0;
+                            color: #fff;
+                            display: block;
+                            float: right;
+                            font-size: 12px;
+                            border-radius: 0;
+                            height: 20px;
+                            padding-top: 2px;
+                            position: relative;
+                            right: -25px;
+                            text-align: center;
+                            top: 3px;
+                            transform: rotate(45deg);
+                            width: 77px;
+                        }
+                    }
+                    
+                    img {
+                        margin: 0;
+                    }
+                    
+                    
+                    .woocommerce-loop-product__title {
+                        padding: 5px 10px;
+                        font-weight: bold;
+                        color: crimson;
+                    }
+                    
+                    .price {
+                        color: black;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+
+            .button {
+                margin-top: 0;
+                width: 100%;
+                padding: 5px 10px;
+                border-radius: 0;
+                font-weight: normal;
+                opacity: .9;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .added_to_cart.wc-forward {
+                display: none;
+            }
+
+            .quantity {
+                .input-text.qty.text {
+                    width: 100%;
+                    border: none;
+                    border-top: 1px solid crimson;
+                }
+            }
+        }
+
+        .price-container {
+            border-radius: 2px;
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            width: 60px;
+            height: 60px;
+            opacity: .9;
+            background-color: crimson;
+            
+            &::before, &::after {
+                content: "";
+                border-radius: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background-color: crimson;
+                transform: rotate(22.5deg);
+            }
+
+            &::after {
+                transform: rotate(-22.5deg);
+            }
+
+            .price {
+                position: absolute;
+                z-index: 1;
+                padding: 0;
+                
+                &::before, &::after {
+                    content: "";
+                    border-radius: 2px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 60px;
+                    height: 60px;
+                    background-color: crimson;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+                .number {
+                    position: absolute;
+                    z-index: 1;
+                    color: white;
+                    top: 175%;
+                    font-weight: bold;
+                    
+                    ins {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-decoration: none;
+                    }
+
+                    del {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
